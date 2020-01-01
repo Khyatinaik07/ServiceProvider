@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:com.example.serviceprovider.app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activity.home.PrefferedServiceActivity"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            com.example.serviceprovider.app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            com.example.serviceprovider.app:contentScrim="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            com.example.serviceprovider.app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                com.example.serviceprovider.app:layout_collapseParallaxMultiplier="0.7"
+                android:src="@drawable/photographer"
+                com.example.serviceprovider.app:layout_collapseMode="parallax"
+                />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            com.example.serviceprovider.app:popupTheme="@style/AppTheme.PopupOverlay"
+            com.example.serviceprovider.app:layout_collapseMode="pin"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_preffered_service"
+        android:id="@+id/prefer"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:com.example.serviceprovider.app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragment.MyProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_218sdp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appbar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            com.example.serviceprovider.app:contentScrim="?attr/colorPrimary"
+            com.example.serviceprovider.app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background"
+                android:fitsSystemWindows="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                com.example.serviceprovider.app:layout_collapseMode="parallax"
+                android:alpha="0.5"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_17sdp"
+                fontPath="font/TxtBold.ttf"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="32dp"
+                com.example.serviceprovider.app:layout_collapseMode="parallax"
+                android:layout_gravity="bottom"
+                android:text="Khyati"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                com.example.serviceprovider.app:layout_collapseMode="pin"
+                com.example.serviceprovider.app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                com.example.serviceprovider.app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        com.example.serviceprovider.app:layout_anchor="@+id/appbar"
+        com.example.serviceprovider.app:srcCompat="@drawable/editimage"
+        com.example.serviceprovider.app:layout_anchorGravity="bottom|right|end"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"/>
+
+    <include layout="@layout/content_my_profile_fragment"
+        android:id="@+id/profile"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

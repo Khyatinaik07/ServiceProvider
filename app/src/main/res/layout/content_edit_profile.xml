@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:com.example.serviceprovider.app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    com.example.serviceprovider.app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="activity.home.EditProfileActivity"
+    tools:showIn="@layout/activity_edit_profile"
+    android:padding="@dimen/_8sdp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name2"
+            android:text="Khyati Naik"
+            android:editable="false">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email2"
+            android:text="k@gmail.com"
+            android:editable="false">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mobile"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobile2"
+            android:hint="@string/changemobile"
+            android:inputType="number">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pass"
+        android:layout_below="@+id/mobile"
+        com.example.serviceprovider.app:passwordToggleEnabled="true"
+        com.example.serviceprovider.app:passwordToggleTint="@color/black"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pass2"
+            android:inputType="textPassword"
+            android:hint="@string/changepass">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cpass"
+        android:layout_below="@+id/pass"
+        com.example.serviceprovider.app:passwordToggleEnabled="true"
+        com.example.serviceprovider.app:passwordToggleTint="@color/black"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cpass2"
+            android:inputType="textPassword"
+            android:hint="@string/cpassword">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cpass"
+        android:id="@+id/update"
+        android:text="@string/update"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_20sdp"
+        fontPath="font/TxtBold.ttf">
+    </androidx.appcompat.widget.AppCompatButton>
+
+</RelativeLayout>
+</layout>

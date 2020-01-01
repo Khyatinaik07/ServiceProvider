@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.onlineserviceportal">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_luncher_foreground"
+        android:logo="@mipmap/ic_luncher_foreground"
+        android:roundIcon="@mipmap/ic_luncher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="activity.authentication.VerifyOTPActivity"
+            android:label="@string/title_activity_verify_otp"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="activity.authentication.ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.MembershipActivity"
+            android:label="@string/title_activity_membership"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.ServicePackageActivity"
+            android:label="@string/title_activity_service_package"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.PrefferedServiceActivity"
+            android:label="@string/title_activity_preffered_service"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.BookingDetailActivity"
+            android:label="@string/title_activity_booking_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="fragment.BookingHistoryFragment"
+            android:label="@string/title_activity_booking_history_fragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="fragment.BookingTypeActivity"
+            android:label="@string/title_activity_booking_type"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.EditProfileActivity"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="fragment.MyProfileFragment"
+            android:label="@string/title_activity_my_profile_fragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.DateTimeActivity"
+            android:label="@string/title_activity_date_time"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.LocationActivity"
+            android:label="@string/title_activity_location"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="fragment.BookingFragment"
+            android:label="@string/title_activity_booking_fragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.SubServiceAllActivity"
+            android:label="@string/title_activity_sub_service_all"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.SubTypeServiceActivity"
+            android:label="@string/title_activity_sub_type_service"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="fragment.HomePageFragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.home.HomePageTabActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.authentication.RegistrationActivity"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="activity.authentication.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="activity.basic.BaseApp" />
+        <activity
+            android:name="activity.basic.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service
+            android:name="activity.home.GetAddressIntentService"
+            android:exported="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>
